@@ -4,8 +4,9 @@ import { motion } from 'framer-motion';
 const pages = [
   { path: '/', name: 'Welcome', number: 1 },
   { path: '/reasons', name: 'Reasons', number: 2 },
-  { path: '/letter', name: 'Letter', number: 3 },
-  { path: '/question', name: 'Question', number: 4 },
+  { path: '/gallery', name: 'Memories', number: 3 },
+  { path: '/letter', name: 'Letter', number: 4 },
+  { path: '/question', name: 'Question', number: 5 },
 ];
 
 const Layout = ({ children }) => {

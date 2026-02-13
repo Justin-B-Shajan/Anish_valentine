@@ -16,6 +16,7 @@ const TheQuestion = () => {
     "Are you sure? 🥺",
     "Think again! 🧐",
     "Thangam please... ❤️",
+    "EDO please... ❤️",
     "Don't do this to me! 😭",
     "I'll be very sad... 💔",
     "Pretty please? 🙏",
@@ -198,49 +199,59 @@ const TheQuestion = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: 'spring', damping: 15, stiffness: 100 }}
           >
-            <div className="glass rounded-[2rem] md:rounded-[3rem] p-8 md:p-20 border border-crimson/20 shadow-[0_0_100px_rgba(220,20,60,0.2)]">
+            <div className="relative flex justify-center items-center mb-12 md:mb-20 h-56 md:h-96">
+              {/* White round base */}
               <motion.div
-                className="text-[6rem] md:text-[12rem] mb-6 md:mb-12 leading-none"
-                animate={{
-                  scale: [1, 1.1, 1],
-                }}
-                transition={{
-                  duration: 0.8,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
+                className="w-48 h-48 md:w-80 md:h-80 bg-white rounded-full absolute shadow-[0_0_50px_rgba(255,255,255,0.3)]"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ type: 'spring', damping: 15, stiffness: 100, delay: 0.2 }}
+              />
+
+              {/* FINAL.jpeg projecting out */}
+              <motion.div
+                className="w-56 h-56 md:w-96 md:h-96 z-10 relative"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ type: 'spring', damping: 12, stiffness: 100, delay: 0.4 }}
               >
-                👩‍❤️‍👨
+                <div className="w-full h-full rounded-full border-8 border-white overflow-hidden shadow-2xl relative">
+                  <img
+                    src="/src/public/FINAL.jpeg"
+                    alt="Our Final Moment"
+                    className="w-full h-full object-cover scale-110"
+                  />
+                </div>
               </motion.div>
+            </div>
 
-              <h1 className="text-4xl md:text-8xl font-display text-white mb-6 md:mb-8 text-shadow leading-tight">
-                I Knew You'd Say <br />
-                <span className="text-crimson">Yes!</span>
-              </h1>
+            <h1 className="text-4xl md:text-8xl font-display text-white mb-6 md:mb-8 text-shadow leading-tight">
+              I Knew You'd Say <br />
+              <span className="text-crimson">Yes, DEAR!</span>
+            </h1>
 
-              <p className="text-xl md:text-4xl text-soft-pink font-body mb-8 md:mb-12 animate-pulse px-4">
-                You've made me the happiest man alive! ❤️
-              </p>
+            <p className="text-xl md:text-4xl text-soft-pink font-body mb-8 md:mb-12 animate-pulse px-4">
+              You've made me the happiest man alive! ❤️
+            </p>
 
-              <div className="flex justify-center gap-4">
-                {[...Array(5)].map((_, i) => (
-                  <motion.span
-                    key={i}
-                    className="text-4xl"
-                    animate={{
-                      y: [0, -20, 0],
-                      scale: [1, 1.2, 1],
-                    }}
-                    transition={{
-                      duration: 1,
-                      repeat: Infinity,
-                      delay: i * 0.1,
-                    }}
-                  >
-                    💖
-                  </motion.span>
-                ))}
-              </div>
+            <div className="flex justify-center gap-4">
+              {[...Array(5)].map((_, i) => (
+                <motion.span
+                  key={i}
+                  className="text-4xl"
+                  animate={{
+                    y: [0, -20, 0],
+                    scale: [1, 1.2, 1],
+                  }}
+                  transition={{
+                    duration: 1,
+                    repeat: Infinity,
+                    delay: i * 0.1,
+                  }}
+                >
+                  💖
+                </motion.span>
+              ))}
             </div>
           </motion.div>
         )}

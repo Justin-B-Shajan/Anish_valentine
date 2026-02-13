@@ -31,7 +31,7 @@ const Welcome = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
-          Thangam
+          EDO
         </motion.h2>
 
         <motion.p
@@ -79,6 +79,7 @@ const Welcome = () => {
               />
             </motion.button>
           </Link>
+
         </motion.div>
       </motion.div>
 

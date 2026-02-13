@@ -6,6 +6,7 @@ import Welcome from './pages/Welcome';
 import ReasonsILoveYou from './pages/ReasonsILoveYou';
 import LoveLetter from './pages/LoveLetter';
 import TheQuestion from './pages/TheQuestion';
+import Gallery from './pages/Gallery';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -78,6 +79,20 @@ const AnimatedRoutes = () => {
               transition={pageTransition}
             >
               <TheQuestion />
+            </motion.div>
+          }
+        />
+        <Route
+          path="/gallery"
+          element={
+            <motion.div
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <Gallery />
             </motion.div>
           }
         />

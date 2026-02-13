@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const images = [
-  '/src/public/IMG_9654.PNG',
-  '/src/public/IMG_9655.PNG',
-  '/src/public/IMG_9657.PNG',
-  '/src/public/IMG_9658.PNG',
-  '/src/public/IMG_9659.PNG',
-  '/src/public/IMG_9660.PNG',
+  '/IMG_9654.PNG',
+  '/IMG_9655.PNG',
+  '/IMG_9657.PNG',
+  '/IMG_9658.PNG',
+  '/IMG_9659.PNG',
+  '/IMG_9660.PNG',
 ];
 
 const Gallery = () => {

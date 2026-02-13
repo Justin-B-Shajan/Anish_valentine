@@ -217,7 +217,7 @@ const TheQuestion = () => {
               >
                 <div className="w-full h-full rounded-full border-8 border-white overflow-hidden shadow-2xl relative">
                   <img
-                    src="/src/public/FINAL.jpeg"
+                    src="/FINAL.jpeg"
                     alt="Our Final Moment"
                     className="w-full h-full object-cover scale-110"
                   />
